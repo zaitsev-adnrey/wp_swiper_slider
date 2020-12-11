@@ -1,0 +1,10 @@
+
+.slideraz-iframe {
+    width: 100%;
+    height: 250px;
+}
+
+.swiper-button-next:after, .swiper-button-prev:after {
+    font-size: 25px !important;
+}
+

@@ -1,0 +1,138 @@
+
+.slide-list .item-slide {
+	align-items: center;
+}
+.slide-list .item-slide input {
+	width: 100%;
+	max-width: 400px;
+}
+
+
+.ui-accordion-header {
+    background-color: #294d86;
+    color: #fff;
+    cursor: pointer;
+    margin: 0;
+    padding: 0.5em;
+    display: block;
+    font-size: 1.17em;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+    width: auto;
+    border-radius: 8px;
+    
+}
+
+#poststuff #box_slides_options.postbox .inside {
+	display: flex;
+    flex-direction: column;
+	padding: 10px 12px 15px;
+}
+
+#poststuff #box_slides_options.postbox .inside label {
+    vertical-align: middle;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+	margin: 12px 0;
+}
+
+#poststuff #box_slides_options.postbox .inside .select-slider-az,
+#poststuff #box_slides_options.postbox .inside .inputs-slider-az {
+	width: 125px;
+}
+
+#advanced-sortables input[type=text] {
+    margin: 15px 0 7px;
+}
+
+#advanced-sortables input[type="button" i] {
+    border-color: #d6e2e5;
+}
+
+.add-slide {
+	color: #294d86;
+    cursor: pointer;
+    padding: 5px;
+    margin: 25px 0 15px;
+	border-width: 1px;
+    border-radius: 3px;
+	border-color: #d6e2e5;
+}
+
+.remove-slide {
+    color: #314854;
+    cursor: pointer;
+    float: right;
+    font-size: 25px;
+}
+
+.ui-accordion-header {
+    background-color: #d6e2e5;
+    color: #4e5b62;
+    cursor: pointer;
+    margin: 0;
+    padding: 0.7em;
+    font-size: 1.3em;
+    font-weight: 500;
+    width: auto;
+    border-radius: 8px;
+    margin: 1em 0;
+}
+
+#advanced-sortables .form-table td {
+    padding: 0;
+}
+
+.wp-core-ui .button, .wp-core-ui .button.button-large, .wp-core-ui .button.button-small, a.preview, input#publish, input#save-post {
+    margin-bottom: 14px;
+    margin-top: 10px;
+}
+
+.slide-container {
+	display: flex;
+	flex-direction: column;
+	margin-top: 20px;
+}
+
+.slide-image-container {
+	display: flex;
+    flex-direction: column;
+}
+
+.slide-container textarea{
+	width: 100%;
+}
+
+.slide-container img {
+	width: auto;
+	height: 200px;
+}
+
+.open-accordion {
+	width: 45px;
+    height: 22px;
+    margin: 2px 25px 0 5px;
+}
+
+
+@media (min-width: 640px) {
+	
+	.slide-container {
+		flex-direction: row;
+	}
+	
+	.slide-image-container {
+		width: 30%;
+	}
+	
+	.slide-container textarea{
+		margin-left: 30px;
+		width: 70%;
+	}
+}
+
+

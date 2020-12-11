@@ -1,0 +1,113 @@
+.container {
+    padding-right: 25px !important;
+    padding-left: 25px !important;
+}
+
+.swiper-slide img {
+    width: 100%;
+}
+
+.slideraz-slide-container {
+    position: absolute;
+    width: 100%;
+    padding-right: 25px;
+    padding-left: 25px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.swiper-container-fade .slideraz-slide-text {
+    margin: 25px auto;
+    color: #fff;
+    text-align: left; 
+}
+
+.swiper-container-coverflow {
+    padding-bottom: 100%;
+}
+
+.swiper-container-coverflow .slideraz-slide-container {
+    margin-top: 100%;
+    padding-top: 30px;
+    color: #369;
+}
+
+.swiper-container-coverflow .slideraz-slide-text {
+    text-align: center;
+}
+
+.swiper-container-coverflow img {
+    box-shadow: 1px 1px 3px #898181;
+}
+
+.swiper-container-coverflow .swiper-button-next, .swiper-container-coverflow .swiper-button-prev {
+    top: 25%;
+}
+
+.swiper-container-coverflow {
+        padding-bottom: 70%;
+    }
+
+
+@media (min-width: 576px) {
+    
+    .swiper-container-fade .slideraz-slide-text {
+        max-width: 992px;
+    }
+    
+    .swiper-container-coverflow .swiper-button-next, .swiper-container-coverflow .swiper-button-prev {
+        top: 35%;
+    }
+    
+     .swiper-container-coverflow {
+        padding-bottom: 100px;
+    }
+}
+
+
+@media (min-width: 960px) {
+    
+    .swiper-container-fade .slideraz-slide-text {
+        max-width: 1170px;
+    }
+    
+    .swiper-container-coverflow .swiper-button-next, .swiper-container-coverflow .swiper-button-prev {
+        top: 40%;
+    }
+}
+
+
+@media (min-width: 1024px) {
+    
+    .swiper-container-fade .slideraz-slide-text {
+        max-width: 1125px;
+    }
+}
+
+
+@media (min-width: 1280px) {
+
+    .container {
+        padding-right: 15px !important;
+        padding-left: 15px !important;
+    }
+    
+    .slideraz-slide-container {
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+    
+    .swiper-container-fade .slideraz-slide-text {
+        max-width: 1140px;
+    }
+    
+    .swiper-container-coverflow .swiper-button-next, .swiper-container-coverflow .swiper-button-prev {
+        top: 45%;
+    }
+}
+
+.slideraz-iframe {
+    width: 100%;
+    height: 250px;
+}
+
