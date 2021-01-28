@@ -20,6 +20,8 @@ class Meta_options_sliders{
 		$initialSlide   = "";
 		$slidesPerView  = "";
 		$rtl 			= "off";
+		$space			="0";
+		$TextPosition	="";
 		$options = get_post_meta($post->ID, 'options', 1);
 		if($options){
 			if (isset($options['effect'])){$effect = $options['effect'];}
@@ -29,6 +31,8 @@ class Meta_options_sliders{
 			if (isset($options['initialSlide'])){$initialSlide = $options['initialSlide'];}
 			if (isset($options['slidesPerView'])){$slidesPerView = $options['slidesPerView'];}
 			if (isset($options['rtl'])){$rtl = $options['rtl'];}
+			if (isset($options['space'])){$space = $options['space'];}
+			if (isset($options['TextPosition'])){$TextPosition = $options['TextPosition'];}
 		}
 		?><label for="effect">Effect<select class="select-slider-az" id="effect" name="options[effect]">
 			<option value="0">----</option>
@@ -48,6 +52,12 @@ class Meta_options_sliders{
 		<label for="autoplay">Autoplay (ms)<input class="inputs-slider-az" type="text" id="autoplay" name="options[autoplay]" value="<?php echo $autoplay; ?>"></label>
 		<label for="initialSlide">initialSlide (number)<input class="inputs-slider-az"  type="text" id="initialSlide" name="options[initialSlide]" value="<?php echo $initialSlide; ?>"></label>
 		<label for="slidesPerView">slidesPerView (number)<input class="inputs-slider-az"  type="text" id="slidesPerView" name="options[slidesPerView]" value="<?php echo $slidesPerView; ?>"></label>
+		<label for="space">space (number)<input class="inputs-slider-az"  type="text" id="space" name="options[space]" value="<?php echo $space; ?>"></label>
+		<label for="text-position-select">text-position<select class="select-slider-az" id="text-position-select" name="options[TextPosition]">
+			<option value="in-image"<?php selected( $TextPosition, 'in-image' )?>>in-image</option>
+			<option value="bottom"<?php selected( $TextPosition, 'bottom' )?>>bottom</option>
+			<option value="top"<?php selected( $TextPosition, 'top' )?>>top</option>
+		</select></label>
 		<?php
 	}
 

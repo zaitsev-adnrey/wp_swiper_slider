@@ -22,16 +22,18 @@ class Metaboxes_slides {
 		$pager	 ="0";
 		//$height  ="";
 		$rtl 	 ="off"; 
+		$text_position = "bottom";
 		$options = get_post_meta($post->ID, 'options', 1);
 		if($options){
 			//if (isset($options['effect'])){$effect = $options['effect'];}
 			if (isset($options['pager'])){$pager = $options['pager'];}
 			//if (isset($options['height'])){$height = $options['height'];}
 			if (isset($options['rtl'])){$rtl =$options['rtl']; }
+			if (isset($options['TextPosition'])){$text_position =$options['TextPosition']; }
 		}
 		
 		?>
-		<input type="text" disabled="disabled" value='[slideraz id="<?php echo $post->ID ;?>" pager="<?php echo $pager ;?>"  rtl="<?php echo $rtl; ?>"]' style="width:100%;"><!--height="<?php// echo $height;?>" -->
+		<input type="text" disabled="disabled" value='[slideraz id="<?php echo $post->ID ;?>" pager="<?php echo $pager ;?>"  rtl="<?php echo $rtl; ?>" text="<?php echo $text_position; ?>"] ' style="width:100%;"><!--height="<?php// echo $height;?>" -->
 		<table class="form-table table-slide">
 			<tr><input type="button" class="add-slide" value="Add new slide">
 				<ul  id="sortable" class="slide-list">	

@@ -4,6 +4,7 @@ function create_slider_js($ID,$options){
 	?>
 	<script>var <?php echo $containerID;?> = new Swiper('#<?php echo $containerID;?>',{
 		autoHeight: true,
+		//allowTouchMove:false,
 		<?php 
 		if($options['pager'] == 'pagination' ){ 
 			echo "pagination: {
@@ -43,12 +44,17 @@ function create_slider_js($ID,$options){
 		if($options['slidesPerView'] != '' ){ 
 			echo 'slidesPerView: '.$options['slidesPerView'].',';
 		}
+		if($options['space'] != '' ){ 
+			echo 'spaceBetween: '.$options['space'].',';
+		}
 		//if ($options['height'] !=""){
 				//echo 'height: '.$options['height'].',';
 		//}
 		//else{
 			//echo "";
 		//}
+		if($options['custom']){echo $options['custom'];}
+		
 		?>
 	});
 		</script>
@@ -66,7 +72,7 @@ function create_slider_js($ID,$options){
 			//}
 			
 }
-function template_return($ID,$pager,$rtl){//,$height
+function template_return($ID,$pager,$rtl,$text_position){//,$height
 			$containerID = "swiper$ID";
 			$slides = get_post_meta( $ID, 'slides', true );
 			$imageMas = $slides[0];
@@ -82,8 +88,21 @@ function template_return($ID,$pager,$rtl){//,$height
 						for ($i = 0; $i < count($imageMas); $i++) {
 							$image = $imageMas[$i];
 							$slide = $slidemas[$i];
+							$text_top="";
+							$text_bottom="";
+							$text_in_image="";
+							if($text_position=="in-image"){
+									$text_in_image='<div class="slideraz-slide-text">'.$slide.'</div>';
+								}
+							if($text_position=="bottom"){
+									$text_bottom='<div class="slideraz-slide-text">'.$slide.'</div>';
+								}
+							if($text_position=="top"){
+									$text_top='<div class="slideraz-slide-text">'.$slide.'</div>';
+								}
 							$rendering_slider .='<div class="swiper-slide" >
-								<div class="slideraz-slide-container"><div class="slideraz-slide-text">'.$slide.'</div></div>';
+								'.$text_top.'
+								<div class="slideraz-slide-container">'.$text_in_image.'</div>';
 
 							if( wp_attachment_is_image( $image ) ){
 								$rendering_slider .='<img 
@@ -91,6 +110,7 @@ function template_return($ID,$pager,$rtl){//,$height
 									 srcset="'.  wp_get_attachment_image_srcset( $image, array(2560,1600) ) .'"
 									 sizes="'.  wp_get_attachment_image_sizes( $image, array(2560,1600) ) .'"
 								 >
+								 '.$text_bottom.'
 							</div>';
 							}
 							else{

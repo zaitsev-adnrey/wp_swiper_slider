@@ -49,7 +49,9 @@ add_action( 'admin_enqueue_scripts', 'true_include_myuploadscript' );
 include "post-types/slideraz.php";
 include "metaboxs/meta.php";
 include "metaboxs/options.php";
+include "metaboxs/custom_param.php";
 include "lib/functions.php";
+
 
 add_shortcode( 'slideraz', 'slideraz_short_func' );
 function slideraz_short_func( $atts ){
@@ -59,8 +61,9 @@ function slideraz_short_func( $atts ){
 		'pager' 	=> '0',
 		//'height' 	=> '',
 		'rtl' 		=> 'off',
+		'text'		=>  'bottom',
 	), $atts );
-	$out = template_return($atts['id'],$atts["pager"],$atts["rtl"]);//,$atts["height"]
+	$out = template_return($atts['id'],$atts["pager"],$atts["rtl"],$atts["text"]);//,$atts["height"]
 	return $out;
 }
 function slider_footer_js(){
